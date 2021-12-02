@@ -122,7 +122,8 @@ int hash_set_insert (HashSet *hash_set, Value value)
     {
 
       int index = get_index_hash_function (hash_set->capacity,
-                                           hash_set->hash_func, value, (int) i);
+                                           hash_set->hash_func,
+                                           value, (int) i);
       if (i == INITIAL_IND)
         {
           first_node_hash = hash_set->NodesList[index];
